@@ -53,6 +53,6 @@ if __name__ == "__main__":
     end = time.time()
     print("multi_process, cost:",end-start,"seconds")
 
-#     single_thread, cost: 9.012222290039062e-05 seconds
-# multi_thread, cost: 0.007825136184692383 seconds
-# multi_process, cost: 0.05264687538146973 seconds
+#single_thread, cost: 0.524777889251709 seconds
+# multi_thread, cost: 0.5671963691711426 seconds
+# multi_process, cost: 0.11627411842346191 seconds
