@@ -6,12 +6,16 @@ from concurrent.futures import ThreadPoolExecutor
 app = flask.Flask(__name__)
 pool = ThreadPoolExecutor()
 
+
 def read_file():
     time.sleep(0.1)
     return "file"
+
+
 def read_db():
     time.sleep(0.2)
     return "db"
+
 
 def read_api():
     time.sleep(0.3)
@@ -27,7 +31,7 @@ def index():
         {
             "result_file": result_file.result(),
             "result_db": result_db.result(),
-            "result_api": result_api.result() 
+            "result_api": result_api.result(),
         }
     )
 
