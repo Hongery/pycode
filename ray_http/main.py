@@ -1,26 +1,36 @@
 from distutils.version import LooseVersion
+# from http import server
 import ray
 from ray import serve
 from starlette.requests import Request
-import logging
+# import logging
 
-logger = logging.basicConfig(level=logging.INFO)
+# logger = logging.basicConfig(level=logging.INFO)
 
-@serve.deployment
-class Deployment2:
-    async def __init__(self):
-        logging.basicConfig(level=logging.INFO)
-        pass
-    async def __call__(self):
-        logging.basicConfig(level=logging.DEBUG)
-        return "test1"
+# @serve.deployment
+# class Deployment2:
+#     async def __init__(self):
+#         # logging.basicConfig(level=logging.INFO)
+#         pass
+#     async def __call__(self):
+#         # logging.basicConfig(level=logging.DEBUG)
+#         return "test1"
 
-@serve.deployment
+# @serve.deployment(_autoscaling_config={"min_replicas":1,"max_replicas":30,"downscale_delay_s":10,"upscale_delay_s":10,},version:'v1')
+@serve.deployment(
+    _autoscaling_config={
+        "min_replicas": 1,
+        "max_replicas": 30,
+        "downscale_delay_s":10,
+        "upscale_delay_s":10,
+    },
+    version="v1",
+)
 class Deployment:
     async def __init__(self):
         pass
     async def __call__(self):
-        logging.info("test-------------")
+        # logging.info("test-------------")
         # req  = request.json()
         return "test"
         

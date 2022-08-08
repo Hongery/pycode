@@ -46,7 +46,7 @@ class MyCustomDataIterator:
 # 可迭代数据类
 class MyCustomData:
     @property
-    def size(self): #假设数据大小
+    def size(self): #假设数据大小 
         return self.size
     
     def get_value(self, index): # 假设通过索引得到数据

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../gocode/src/go-hade/framework"
+		},
+		{
+			"path": "../../gocode/src/go-hade"
+		}
+	],
+	"settings": {}
+}
